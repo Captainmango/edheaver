@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap')
+$panel-background: #d3d0cb
+$btn-primary: #e2c044
+$btn-secondary: #1e2019
+$text-colour: #393e41
+$background-start: #2193b0
+
+@mixin panel
+    width: 70vw
+    height: 100vh
+    display: grid
+    grid-template: repeat(12, 1fr) / repeat(12, 1fr)
+
+body
+  background: #2193b0
+  background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed)
+  background: linear-gradient(to right, #2193b0, #6dd5ed)
+  &::-webkit-scrollbar
+      display: none
+
+*, ::after, ::before 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: "Nunito"
+
+.container
+    margin: 0 auto
+    width: 70vw
+    height: 100vh
+    display: flex
+    flex-direction: column
+    
+.panel
+    @include panel
+
+           
