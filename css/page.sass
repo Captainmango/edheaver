@@ -1,16 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap')
+
 $panel-background: #d3d0cb
 $btn-primary: #e2c044
 $btn-secondary: #1e2019
 $text-colour: #393e41
 $background-start: #2193b0
+$title-font: "Lora"
+$para-font: "Nunito"
+
 
 @mixin panel
     width: 70vw
     height: 100vh
     display: grid
     grid-template: repeat(12, 1fr) / repeat(12, 1fr)
-    //background: $panel-background
+    background: $panel-background
 
 body
   background: #2193b0
@@ -25,6 +30,14 @@ body
     padding: 0
     font-family: "Nunito"
     color: $text-colour
+h1
+    display: block
+    margin: 0 auto
+    grid-column: 5 / 7
+    span: 3
+    place-content: center
+    text-align: center
+    font-family: $title-font
 
 h3
     padding-bottom: 1em
@@ -59,6 +72,44 @@ h3
     background: fade-out($panel-background, 0.4)
     border: 1px $panel-background solid
     border-radius: 3px
+
+.text-center
+    grid-row: 3 / 9
+    grid-column: 3 / 11
+    span: 6
+    place-content: center
+    padding: 0.5em 1em
+    background: fade-out($panel-background, 0.4)
+    border: 1px $panel-background solid
+    border-radius: 3px
+
+.title
+    grid-row: 2 / 3
+    grid-column: 1 / -1
+    span: 12
+    place-content: center
+    text-align: center
+.subtitle
+    grid-row: 4 / 5
+    grid-column: 1 / -1
+    span: 12
+    place-content: center
+    text-align: center
+    animation: instruct ease 2s infinite
+
+@keyframes instruct
+    0%
+        transfrom: scale(1)
+    30%
+        transform: scale(1.1)
+
+.scrollIcon
+    grid-row: 11
+    grid-column: 6 / 8
+    span: 2
+    place-content: center
+    align-self: center
+    display: flex
 
 @keyframes scroll 
 	0% 

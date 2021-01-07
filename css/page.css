@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap");
 body {
   background: #2193b0;
   background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
@@ -16,6 +17,18 @@ body::-webkit-scrollbar {
   padding: 0;
   font-family: "Nunito";
   color: #393e41;
+}
+
+h1 {
+  display: block;
+  margin: 0 auto;
+  -ms-grid-column: 5;
+  -ms-grid-column-span: 2;
+  grid-column: 5 / 7;
+  span: 3;
+  place-content: center;
+  text-align: center;
+  font-family: "Lora";
 }
 
 h3 {
@@ -43,6 +56,7 @@ h3 {
   -ms-grid-rows: (1fr)[12];
   -ms-grid-columns: (1fr)[12];
       grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+  background: #d3d0cb;
 }
 
 .text-left {
@@ -73,6 +87,78 @@ h3 {
   background: rgba(211, 208, 203, 0.6);
   border: 1px #d3d0cb solid;
   border-radius: 3px;
+}
+
+.text-center {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 6;
+  grid-row: 3 / 9;
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 8;
+  grid-column: 3 / 11;
+  span: 6;
+  place-content: center;
+  padding: 0.5em 1em;
+  background: rgba(211, 208, 203, 0.6);
+  border: 1px #d3d0cb solid;
+  border-radius: 3px;
+}
+
+.title {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2 / 3;
+  grid-column: 1 / -1;
+  span: 12;
+  place-content: center;
+  text-align: center;
+}
+
+.subtitle {
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 1;
+  grid-row: 4 / 5;
+  grid-column: 1 / -1;
+  span: 12;
+  place-content: center;
+  text-align: center;
+  -webkit-animation: instruct ease 2s infinite;
+          animation: instruct ease 2s infinite;
+}
+
+@-webkit-keyframes instruct {
+  0% {
+    transfrom: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+@keyframes instruct {
+  0% {
+    transfrom: scale(1);
+  }
+  30% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.scrollIcon {
+  -ms-grid-row: 11;
+  grid-row: 11;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6 / 8;
+  span: 2;
+  place-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 @-webkit-keyframes scroll {
