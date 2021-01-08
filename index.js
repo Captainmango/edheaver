@@ -1,10 +1,11 @@
 gsap.registerPlugin(ScrollTrigger);
 
-gsap.utils.toArray(".panel").forEach((panel, i) => {
+let scroll = gsap.utils.toArray(".panel").forEach((panel, i) => {
     ScrollTrigger.create({
         trigger: panel,
         start: "top top",
         pin: true,
-        pinSpacing: true
+        pinSpacing: false,
+        snap: i
     });
 });

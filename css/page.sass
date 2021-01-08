@@ -5,17 +5,21 @@ $panel-background: #d3d0cb
 $btn-primary: #e2c044
 $btn-secondary: #1e2019
 $text-colour: #393e41
-$background-start: #2193b0
+$background-start: linear-gradient(to right, #a8ff78, #78ffd6)
+$background-second: linear-gradient(to right, #11998e, #38ef7d)
+$background-third: linear-gradient(to right, #00f260, #0575e6)
+$background-fourth: linear-gradient(to right, #2193b0, #6dd5ed)
 $title-font: "Lora"
 $para-font: "Nunito"
 
 
 @mixin panel
-    width: 70vw
+    width: 100vw
     height: 100vh
     display: grid
     grid-template: repeat(12, 1fr) / repeat(12, 1fr)
-    background: $panel-background
+    background: linear-gradient(to right, #2193b0, #6dd5ed)
+    box-shadow: 3px 3px black
 
 body
   background: #2193b0
@@ -39,8 +43,12 @@ h1
     text-align: center
     font-family: $title-font
 
-h3
+h3, h2
     padding-bottom: 1em
+
+p
+    font-size: 16px
+    line-height: 1.5rem
 
 .container
     margin: 0 auto
@@ -53,23 +61,49 @@ h3
 .panel
     @include panel
 
+.second
+    background: $background-second
+
+.third
+    background: $background-third
+
+.fourth
+    background: $background-fourth
+
+.fifth
+    background: $panel-background
+    grid-template: repeat(12, 1fr) / 1fr
+    height: 10vh
+
+    h1
+        grid-column: 0 / 0
+        grid-row: 0 / 0
+    
+.certificate
+    grid-column: 7 / 11
+    grid-row: 4 / 10
+
+img
+    height: 100%
+    width: 100%
+
 .text-left
-    grid-row: 3 / 7
-    grid-column: 3 / 7
+    grid-row: 4 / 10
+    grid-column: 3 / 6
     span: 3
     place-content: center
     padding: 0.5em 1em
-    background: fade-out($panel-background, 0.4)
+    background: fade-out($panel-background, 0.7)
     border: 1px $panel-background solid
     border-radius: 3px
 
 .text-right
     grid-row: 7 / 11
-    grid-column: 7 / 11
+    grid-column: 8 / 11
     span: 3
     place-content: center
     padding: 0.5em 1em
-    background: fade-out($panel-background, 0.4)
+    background: fade-out($panel-background, 0.7)
     border: 1px $panel-background solid
     border-radius: 3px
 
@@ -79,7 +113,7 @@ h3
     span: 6
     place-content: center
     padding: 0.5em 1em
-    background: fade-out($panel-background, 0.4)
+    background: fade-out($panel-background, 0.7)
     border: 1px $panel-background solid
     border-radius: 3px
 

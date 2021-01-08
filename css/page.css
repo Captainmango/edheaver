@@ -31,8 +31,13 @@ h1 {
   font-family: "Lora";
 }
 
-h3 {
+h3, h2 {
   padding-bottom: 1em;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5rem;
 }
 
 .container {
@@ -49,27 +54,72 @@ h3 {
 }
 
 .panel {
-  width: 70vw;
+  width: 100vw;
   height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: (1fr)[12];
   -ms-grid-columns: (1fr)[12];
       grid-template: repeat(12, 1fr)/repeat(12, 1fr);
+  background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+  -webkit-box-shadow: 3px 3px black;
+          box-shadow: 3px 3px black;
+}
+
+.second {
+  background: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
+  background: linear-gradient(to right, #11998e, #38ef7d);
+}
+
+.third {
+  background: -webkit-gradient(linear, left top, right top, from(#00f260), to(#0575e6));
+  background: linear-gradient(to right, #00f260, #0575e6);
+}
+
+.fourth {
+  background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
+  background: linear-gradient(to right, #2193b0, #6dd5ed);
+}
+
+.fifth {
   background: #d3d0cb;
+  -ms-grid-rows: (1fr)[12];
+  -ms-grid-columns: 1fr;
+      grid-template: repeat(12, 1fr)/1fr;
+  height: 10vh;
+}
+
+.fifth h1 {
+  grid-column: 0 / 0;
+  grid-row: 0 / 0;
+}
+
+.certificate {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-column: 7 / 11;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 6;
+  grid-row: 4 / 10;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }
 
 .text-left {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 4;
-  grid-row: 3 / 7;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 6;
+  grid-row: 4 / 10;
   -ms-grid-column: 3;
-  -ms-grid-column-span: 4;
-  grid-column: 3 / 7;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
   span: 3;
   place-content: center;
   padding: 0.5em 1em;
-  background: rgba(211, 208, 203, 0.6);
+  background: rgba(211, 208, 203, 0.3);
   border: 1px #d3d0cb solid;
   border-radius: 3px;
 }
@@ -78,13 +128,13 @@ h3 {
   -ms-grid-row: 7;
   -ms-grid-row-span: 4;
   grid-row: 7 / 11;
-  -ms-grid-column: 7;
-  -ms-grid-column-span: 4;
-  grid-column: 7 / 11;
+  -ms-grid-column: 8;
+  -ms-grid-column-span: 3;
+  grid-column: 8 / 11;
   span: 3;
   place-content: center;
   padding: 0.5em 1em;
-  background: rgba(211, 208, 203, 0.6);
+  background: rgba(211, 208, 203, 0.3);
   border: 1px #d3d0cb solid;
   border-radius: 3px;
 }
@@ -99,7 +149,7 @@ h3 {
   span: 6;
   place-content: center;
   padding: 0.5em 1em;
-  background: rgba(211, 208, 203, 0.6);
+  background: rgba(211, 208, 203, 0.3);
   border: 1px #d3d0cb solid;
   border-radius: 3px;
 }
