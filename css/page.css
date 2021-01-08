@@ -154,10 +154,19 @@ img {
   border-radius: 3px;
 }
 
-.title {
+.vanity {
   -ms-grid-row: 2;
-  -ms-grid-row-span: 1;
-  grid-row: 2 / 3;
+  grid-row: 2 / 2;
+  grid-column: 1 / -1;
+  span: 12;
+  place-content: center;
+  text-align: center;
+  font-size: 38px;
+}
+
+.title {
+  -ms-grid-row: 3;
+  grid-row: 3 / 3;
   grid-column: 1 / -1;
   span: 12;
   place-content: center;
@@ -165,15 +174,50 @@ img {
 }
 
 .subtitle {
-  -ms-grid-row: 4;
+  -ms-grid-row: 10;
   -ms-grid-row-span: 1;
-  grid-row: 4 / 5;
+  grid-row: 10 / 11;
   grid-column: 1 / -1;
   span: 12;
   place-content: center;
   text-align: center;
   -webkit-animation: instruct ease 2s infinite;
           animation: instruct ease 2s infinite;
+}
+
+.email {
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 1;
+  grid-row: 8 / 9;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 2;
+  grid-column: 6 / 8;
+  span: 2;
+  place-content: center;
+  text-align: center;
+}
+
+.button-primary {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #e2c044;
+  border: 0;
+  padding: 10px 15px;
+  color: #393e41;
+  border-radius: 3px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 18px;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button-primary:hover, .button-primary:focus {
+  background-color: #d3d0cb;
+  color: #393e41;
 }
 
 @-webkit-keyframes instruct {
