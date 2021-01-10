@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap')
 @import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap')
 
-$panel-background: #d3d0cb
+$panel-background: #f8f4ff
 $btn-primary: #e2c044
 $btn-secondary: #1e2019
 $text-colour: #393e41
@@ -51,24 +51,26 @@ p
     line-height: 1.5rem
 
 .container
-    margin: 0 auto
-    width: 70vw
-    height: 100vh
+    grid-row: 5 / 10
+    grid-column: 2 / 11
     display: flex
-    flex-direction: column
+    flex-direction: row
     
     
 .panel
     @include panel
+    
 
-.second
-    background: $background-second
-
-.third
-    background: $background-third
-
-.fourth
+.default
     background: $background-fourth
+    background-image: url(../sky.jpg)
+    
+    h1, h2
+        color: $panel-background
+    
+
+.content
+    background: $panel-background
 
 .fifth
     background: $panel-background
@@ -84,8 +86,10 @@ p
     grid-row: 4 / 10
 
 img
-    height: 100%
-    width: 100%
+    max-height: 100%
+    max-width: 100%
+    object-fit: fill
+
 
 .text-left
     grid-row: 4 / 10
@@ -124,6 +128,8 @@ img
     place-content: center
     text-align: center
     font-size: 38px
+
+
 
 .title
     grid-row: 3 / 3
@@ -178,11 +184,14 @@ img
     align-self: center
     display: flex
 
-.lotus
-    grid-row: 5 / 9
+.lotusbox
+    grid-row: 5 / 10
     grid-column: 5 / 9
-    span: 5
+    span: 6
     place-content: center
+
+.lotusflower
+    fill: $panel-background
 
 @keyframes scroll 
 	0% 

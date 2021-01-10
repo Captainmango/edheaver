@@ -41,16 +41,19 @@ p {
 }
 
 .container {
-  margin: 0 auto;
-  width: 70vw;
-  height: 100vh;
+  -ms-grid-row: 5;
+  -ms-grid-row-span: 5;
+  grid-row: 5 / 10;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 9;
+  grid-column: 2 / 11;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .panel {
@@ -67,23 +70,22 @@ p {
           box-shadow: 3px 3px black;
 }
 
-.second {
-  background: -webkit-gradient(linear, left top, right top, from(#11998e), to(#38ef7d));
-  background: linear-gradient(to right, #11998e, #38ef7d);
-}
-
-.third {
-  background: -webkit-gradient(linear, left top, right top, from(#00f260), to(#0575e6));
-  background: linear-gradient(to right, #00f260, #0575e6);
-}
-
-.fourth {
+.default {
   background: -webkit-gradient(linear, left top, right top, from(#2193b0), to(#6dd5ed));
   background: linear-gradient(to right, #2193b0, #6dd5ed);
+  background-image: url(../sky.jpg);
+}
+
+.default h1, .default h2 {
+  color: #f8f4ff;
+}
+
+.content {
+  background: #f8f4ff;
 }
 
 .fifth {
-  background: #d3d0cb;
+  background: #f8f4ff;
   -ms-grid-rows: (1fr)[12];
   -ms-grid-columns: 1fr;
       grid-template: repeat(12, 1fr)/1fr;
@@ -105,8 +107,10 @@ p {
 }
 
 img {
-  height: 100%;
-  width: 100%;
+  max-height: 100%;
+  max-width: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 .text-left {
@@ -119,8 +123,8 @@ img {
   span: 3;
   place-content: center;
   padding: 0.5em 1em;
-  background: rgba(211, 208, 203, 0.3);
-  border: 1px #d3d0cb solid;
+  background: rgba(248, 244, 255, 0.3);
+  border: 1px #f8f4ff solid;
   border-radius: 3px;
 }
 
@@ -134,8 +138,8 @@ img {
   span: 3;
   place-content: center;
   padding: 0.5em 1em;
-  background: rgba(211, 208, 203, 0.3);
-  border: 1px #d3d0cb solid;
+  background: rgba(248, 244, 255, 0.3);
+  border: 1px #f8f4ff solid;
   border-radius: 3px;
 }
 
@@ -149,8 +153,8 @@ img {
   span: 6;
   place-content: center;
   padding: 0.5em 1em;
-  background: rgba(211, 208, 203, 0.3);
-  border: 1px #d3d0cb solid;
+  background: rgba(248, 244, 255, 0.3);
+  border: 1px #f8f4ff solid;
   border-radius: 3px;
 }
 
@@ -216,7 +220,7 @@ img {
 }
 
 .button-primary:hover, .button-primary:focus {
-  background-color: #d3d0cb;
+  background-color: #f8f4ff;
   color: #393e41;
 }
 
@@ -255,15 +259,19 @@ img {
   display: flex;
 }
 
-.lotus {
+.lotusbox {
   -ms-grid-row: 5;
-  -ms-grid-row-span: 4;
-  grid-row: 5 / 9;
+  -ms-grid-row-span: 5;
+  grid-row: 5 / 10;
   -ms-grid-column: 5;
   -ms-grid-column-span: 4;
   grid-column: 5 / 9;
-  span: 5;
+  span: 6;
   place-content: center;
+}
+
+.lotusflower {
+  fill: #f8f4ff;
 }
 
 @-webkit-keyframes scroll {
