@@ -93,22 +93,42 @@ a {
   height: 80vh;
 }
 
-.hero__container h2 {
+.hero__container .headline {
   font-size: 5em;
   color: #f8f4ff;
   padding-bottom: 0.4em;
   width: 10em;
 }
 
-.hero__container h3 {
+.hero__container .description {
   font-size: 3em;
   color: #f8f4ff;
   padding-bottom: 0.4em;
 }
 
-.hero__container h4 {
+.hero__container .process {
   font-size: 1.5em;
   color: #f8f4ff;
+}
+
+.work__title {
+  padding: 1.5em;
+  font-size: 3em;
+  color: #E07A5F;
+}
+
+#panel2 {
+  position: relative;
+}
+
+.triangles {
+  position: absolute;
+  left: 60%;
+  top: 40%;
+  height: 50vh;
+  width: 50vh;
+  opacity: 50%;
+  z-index: -1;
 }
 
 .button-primary {
