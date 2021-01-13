@@ -47,9 +47,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 
-let panel1TL = gsap.timeline({
+let lotusTimeLine = gsap.timeline({
     scrollTrigger: {
-        trigger: "#panel1",
+        trigger: "#panel3",
         start: "top top",
         scrub: 0.7,
         end: "+=300%",
@@ -58,15 +58,15 @@ let panel1TL = gsap.timeline({
     }
 })
 
-panel1TL.addLabel("petal6", 2)
-panel1TL.addLabel("petal5", 1.6)
-panel1TL.addLabel("petal4", 1.2)
-panel1TL.addLabel("petal3", 0.8)
-panel1TL.addLabel("petal2", 0.4)
-panel1TL.addLabel("petal1", 0)
-panel1TL.addLabel("end", 2.5)
+lotusTimeLine.addLabel("petal6", 2)
+lotusTimeLine.addLabel("petal5", 1.6)
+lotusTimeLine.addLabel("petal4", 1.2)
+lotusTimeLine.addLabel("petal3", 0.8)
+lotusTimeLine.addLabel("petal2", 0.4)
+lotusTimeLine.addLabel("petal1", 0)
+lotusTimeLine.addLabel("end", 2.5)
 
-panel1TL.from(".petal__center", {opacity: 0})
+lotusTimeLine.from(".petal__center", {opacity: 0})
     .from(".petal__left__6", {opacity: 0, rotation: 20, ease: "power2.inOut", transformOrigin: "left bottom", x: 50}, "petal6")
     .from(".petal__right__6", {opacity: 0, rotation: -20, ease: "power2.inOut", transformOrigin: "right bottom", x: -50}, "petal6")
     .from(".petal__left__5", {opacity: 0, rotation: 30, ease: "power2.inOut", transformOrigin: "left bottom", x: 140}, "petal5")
@@ -80,38 +80,6 @@ panel1TL.from(".petal__center", {opacity: 0})
     .from(".petal__left__1", {opacity: 0, rotation: 62, ease: "power2.inOut", transformOrigin: "left bottom", x: 61, y: -210}, "petal1")
     .from(".petal__right__1", {opacity: 0, rotation: -60, ease: "power2.inOut", transformOrigin: "left bottom", x: 50, y: -20}, "petal1")
 
-
-
-
-// let panel1Scroll = ScrollTrigger.create({
-//     trigger: "#panel1",
-//     start: "top top",
-//     pin: true,
-//     pinSpacing: false
-// })
-
-// let panel2Scroll = ScrollTrigger.create({
-//     trigger: "#panel2",
-//     start: "top top",
-//     pin: true,
-//     markers: true,
-//     pinSpacing: false
-// })
-
-// let panel3Scroll = ScrollTrigger.create({
-//     trigger: "#panel3",
-//     start: "top top",
-//     pin: true,
-//     pinSpacing: false
-// })
-
-// let panel4Scroll = ScrollTrigger.create({
-//     trigger: "#panel4",
-//     start: "top top",
-//     markers: true,
-//     pin: true,
-//     pinSpacing: false
-// })
 
 // ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
 

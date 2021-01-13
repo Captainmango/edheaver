@@ -1,30 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap')
-@import url('https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap')
 
 $panel-background: #f8f4ff
 $btn-primary: #e2c044
-$btn-secondary: #1e2019
+$btn-secondary: #a1c255
 $text-colour: #393e41
+$hero-colour: #2193b0
+$title-colour: #E07A5F
+
 $background-start: linear-gradient(to right, #a8ff78, #78ffd6)
 $background-second: linear-gradient(to right, #11998e, #38ef7d)
 $background-third: linear-gradient(to right, #00f260, #0575e6)
 $background-fourth: linear-gradient(to right, #2193b0, #6dd5ed)
-$title-font: "Lora"
-$para-font: "Nunito"
+
 
 
 @mixin panel
-    width: 100vw
-    height: 100vh
-    display: grid
-    grid-template: repeat(12, 1fr) / repeat(12, 1fr)
-    background: linear-gradient(to right, #2193b0, #6dd5ed)
-    box-shadow: 3px 3px black
+    min-width: 100vw
+    min-height: 100vh
+
+.panel
+    @include panel
+   
 
 body
-  background: #2193b0
-  background: -webkit-linear-gradient(to right, #2193b0, #6dd5ed)
-  background: linear-gradient(to right, #2193b0, #6dd5ed)
+  background: $panel-background
   &::-webkit-scrollbar
       display: none
 
@@ -32,125 +31,67 @@ body
     box-sizing: border-box
     margin: 0
     padding: 0
-    font-family: "Nunito"
+    font-family: "Lato", Arial
     color: $text-colour
-h1
-    display: block
-    margin: 0 auto
-    grid-column: 5 / 7
-    span: 3
-    place-content: center
-    text-align: center
-    font-family: $title-font
 
-h3, h2
-    padding-bottom: 1em
-
-p
-    font-size: 16px
-    line-height: 1.5rem
-
-.container
-    grid-row: 5 / 10
-    grid-column: 2 / 11
+.navbar
     display: flex
-    flex-direction: row
-    
-    
-.panel
-    @include panel
-    
+    justify-content: space-between
+    align-items: center
+    max-width: 57.5%
+    padding: 1.3em
+    padding-left: 3em
+    .navlinks
+        display: flex
+        justify-content: space-between
+        list-style: none 
+        a
+            color: $text-colour
+            font-size: 1.1em
 
-.default
-    background: $background-fourth
-    background-image: url(../sky.jpg)
     
-    h1, h2
+a
+    text-decoration: none
+    padding: 0 1em
+        
+
+.logo
+    font-weight: bold
+    font-size: 1.3em
+    color: $title-colour
+    a
+        color: $title-colour
+
+.mountains
+    position: absolute
+    top: 0
+    left: 0
+    object-fit: cover
+    z-index: -1
+    width: 100%
+    height: 100%
+
+.hero__container
+    display: flex
+    flex-direction: column
+    align-items: right
+    padding: 10% 5em
+    width: 80vh
+    height: 80vh
+    h2
+        font-size: 5em
+        color: $panel-background
+        padding-bottom: 0.4em
+        width: 10em
+    h3
+        font-size: 3em
+        color: $panel-background
+        padding-bottom: 0.4em
+
+    h4
+        font-size: 1.5em
         color: $panel-background
     
-
-.content
-    background: $panel-background
-
-.fifth
-    background: $panel-background
-    grid-template: repeat(12, 1fr) / 1fr
-    height: 10vh
-
-    h1
-        grid-column: 0 / 0
-        grid-row: 0 / 0
-    
-.certificate
-    grid-column: 7 / 11
-    grid-row: 4 / 10
-
-img
-    max-height: 100%
-    max-width: 100%
-    object-fit: fill
-
-
-.text-left
-    grid-row: 4 / 10
-    grid-column: 3 / 6
-    span: 3
-    place-content: center
-    padding: 0.5em 1em
-    background: fade-out($panel-background, 0.7)
-    border: 1px $panel-background solid
-    border-radius: 3px
-
-.text-right
-    grid-row: 7 / 11
-    grid-column: 8 / 11
-    span: 3
-    place-content: center
-    padding: 0.5em 1em
-    background: fade-out($panel-background, 0.7)
-    border: 1px $panel-background solid
-    border-radius: 3px
-
-.text-center
-    grid-row: 3 / 9
-    grid-column: 3 / 11
-    span: 6
-    place-content: center
-    padding: 0.5em 1em
-    background: fade-out($panel-background, 0.7)
-    border: 1px $panel-background solid
-    border-radius: 3px
-
-.vanity
-    grid-row: 2 / 2
-    grid-column: 1 / -1
-    span: 12
-    place-content: center
-    text-align: center
-    font-size: 38px
-
-
-
-.title
-    grid-row: 3 / 3
-    grid-column: 1 / -1
-    span: 12
-    place-content: center
-    text-align: center
-.subtitle
-    grid-row: 10 / 11
-    grid-column: 1 / -1
-    span: 12
-    place-content: center
-    text-align: center
-    animation: instruct ease 2s infinite
-
-.email
-    grid-row: 8 / 9
-    grid-column: 6 / 8
-    span: 2
-    place-content: center
-    text-align: center
 
 .button-primary
     appearance: none
@@ -177,21 +118,18 @@ img
         transform: scale(1.1)
 
 .scrollIcon
-    grid-row: 11
-    grid-column: 6 / 8
-    span: 2
-    place-content: center
-    align-self: center
-    display: flex
+    display: block
+    padding-left: 5em
+
 
 .lotusbox
-    grid-row: 5 / 10
-    grid-column: 5 / 9
-    span: 6
+    display: grid
+    grid-template: 500px / 500px
     place-content: center
 
+
 .lotusflower
-    fill: $panel-background
+    fill: black
 
 @keyframes scroll 
 	0% 
@@ -202,3 +140,4 @@ img
 	
 svg #wheel 
 	animation: scroll ease 2s infinite
+    fill: $text-colour
