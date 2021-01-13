@@ -38,21 +38,35 @@ body
     display: flex
     justify-content: space-between
     align-items: center
-    max-width: 57.5%
+    max-width: 100%
     padding: 1.3em
     padding-left: 3em
+    
     .navlinks
         display: flex
         justify-content: space-between
         list-style: none 
         a
             color: $text-colour
-            font-size: 1.1em
+            font-size: 1.3em
+            cursor: pointer
+    .sociallinks
+        display: flex
+        justify-content: space-between
+        list-style: none
+
 
     
 a
     text-decoration: none
-    padding: 0 1em
+    padding: 0 1.2em
+    padding-top: 0.2em
+    padding-bottom: 0.2em
+    transition: 0.4s ease
+    &:hover
+        background-color: $hero-colour
+        border-radius: 5px
+
         
 
 .logo
@@ -61,6 +75,7 @@ a
     color: $title-colour
     a
         color: $title-colour
+
 
 .mountains
     position: absolute
@@ -80,17 +95,17 @@ a
     height: 80vh
     .headline
         font-size: 5em
-        color: $panel-background
+        color: $hero-colour
         padding-bottom: 0.4em
         width: 10em
     .description
         font-size: 3em
-        color: $panel-background
+        color: $hero-colour
         padding-bottom: 0.4em
 
     .process
         font-size: 1.5em
-        color: $panel-background
+        color: $hero-colour
 
 .work__title
     padding: 1.5em
@@ -98,9 +113,46 @@ a
     color: $title-colour
 
 .work__container
+    margin: 0 auto
+    width: 80%
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, 1fr)
+    grid-gap: 1em
+
+    .work__section
+        display: flex
+        justify-content: center
+        gap: 4em
+
+        .picture
+            max-width: 600px
+            max-height: 350px
+            height: 30vw
+            img
+                height: 100%
+                width: 100%
+
+        
+        .work__content
+            width: 500px
+            text-align: left
+            justify-content: center
+
+            .project__buttons
+                display: flex
+                justify-content: center
+                gap: 1em
+.project__title
+    padding-bottom: 1em
+
+p
+    padding-bottom: 1em
+    line-height: 1.4em
+    min-width: 350px
 
 
-#panel2
+#panel3, #panel4
     position: relative
 
 .triangles
@@ -109,27 +161,64 @@ a
     top: 40%
     height: 50vh
     width: 50vh
-    opacity: 50%
+    opacity: 30%
     z-index: -1
 
+.aboutme
+    padding-left: 1.5em
+    padding-bottom: 1em
+    padding-top: 1.5em
+    font-size: 3em
+    color: $title-colour
 
-.button-primary
+
+.aboutme__container
+    display: flex
+    width: 700px
+    padding-left: 4em
+    font-size: 1.1em
+
+.skills
+    padding: 1.5em
+    font-size: 3em
+    color: $title-colour
+
+
+.button__primary
     appearance: none
     background-color: $btn-primary
     border: 0
     padding: 10px 15px
     color: $text-colour
     border-radius: 3px
-    width: 100px
+    width: 150px
     cursor: pointer
-    font-size: 18px
+    font-size: 1.1em
     transition-duration: 0.25s
     font-weight: 600
     cursor: pointer
     
     &:hover, &:focus
-      background-color: $panel-background
-      color: $text-colour
+      background-color: $text-colour
+      color: $panel-background
+
+.button__secondary
+    appearance: none
+    background-color: $btn-secondary
+    border: 0
+    padding: 10px 15px
+    color: $text-colour
+    border-radius: 3px
+    width: 120px
+    cursor: pointer
+    font-size: 1.1em
+    transition-duration: 0.25s
+    font-weight: 600
+    cursor: pointer
+    
+    &:hover, &:focus
+      background-color: $text-colour
+      color: $panel-background
 
 @keyframes instruct
     0%
@@ -144,12 +233,16 @@ a
 
 .lotusbox
     display: grid
-    grid-template: 500px / 500px
+    grid-template: 300px / 500px
     place-content: center
+    position: absolute
+    top: 60%
+    left: 2%
+    
 
 
 .lotusflower
-    fill: black
+    fill: $hero-colour
 
 @keyframes scroll 
 	0% 
@@ -161,3 +254,6 @@ a
 svg #wheel 
 	animation: scroll ease 2s infinite
     fill: $text-colour
+
+
+//media queries at 1200px and 1000px. Maybe also below 600px depending on sizing

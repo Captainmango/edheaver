@@ -31,7 +31,7 @@ body::-webkit-scrollbar {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 57.5%;
+  max-width: 100%;
   padding: 1.3em;
   padding-left: 3em;
 }
@@ -48,12 +48,32 @@ body::-webkit-scrollbar {
 
 .navbar .navlinks a {
   color: #393e41;
-  font-size: 1.1em;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.navbar .sociallinks {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
-  padding: 0 1em;
+  padding: 0 1.2em;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+a:hover {
+  background-color: #2193b0;
+  border-radius: 5px;
 }
 
 .logo {
@@ -95,20 +115,20 @@ a {
 
 .hero__container .headline {
   font-size: 5em;
-  color: #f8f4ff;
+  color: #2193b0;
   padding-bottom: 0.4em;
   width: 10em;
 }
 
 .hero__container .description {
   font-size: 3em;
-  color: #f8f4ff;
+  color: #2193b0;
   padding-bottom: 0.4em;
 }
 
 .hero__container .process {
   font-size: 1.5em;
-  color: #f8f4ff;
+  color: #2193b0;
 }
 
 .work__title {
@@ -117,7 +137,68 @@ a {
   color: #E07A5F;
 }
 
-#panel2 {
+.work__container {
+  margin: 0 auto;
+  width: 80%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+  grid-gap: 1em;
+}
+
+.work__container .work__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 4em;
+}
+
+.work__container .work__section .picture {
+  max-width: 600px;
+  max-height: 350px;
+  height: 30vw;
+}
+
+.work__container .work__section .picture img {
+  height: 100%;
+  width: 100%;
+}
+
+.work__container .work__section .work__content {
+  width: 500px;
+  text-align: left;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.work__container .work__section .work__content .project__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 1em;
+}
+
+.project__title {
+  padding-bottom: 1em;
+}
+
+p {
+  padding-bottom: 1em;
+  line-height: 1.4em;
+  min-width: 350px;
+}
+
+#panel3, #panel4 {
   position: relative;
 }
 
@@ -127,11 +208,34 @@ a {
   top: 40%;
   height: 50vh;
   width: 50vh;
-  opacity: 50%;
+  opacity: 30%;
   z-index: -1;
 }
 
-.button-primary {
+.aboutme {
+  padding-left: 1.5em;
+  padding-bottom: 1em;
+  padding-top: 1.5em;
+  font-size: 3em;
+  color: #E07A5F;
+}
+
+.aboutme__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 700px;
+  padding-left: 4em;
+  font-size: 1.1em;
+}
+
+.skills {
+  padding: 1.5em;
+  font-size: 3em;
+  color: #E07A5F;
+}
+
+.button__primary {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -140,18 +244,41 @@ a {
   padding: 10px 15px;
   color: #393e41;
   border-radius: 3px;
-  width: 100px;
+  width: 150px;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 1.1em;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
   font-weight: 600;
   cursor: pointer;
 }
 
-.button-primary:hover, .button-primary:focus {
-  background-color: #f8f4ff;
+.button__primary:hover, .button__primary:focus {
+  background-color: #393e41;
+  color: #f8f4ff;
+}
+
+.button__secondary {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #a1c255;
+  border: 0;
+  padding: 10px 15px;
   color: #393e41;
+  border-radius: 3px;
+  width: 120px;
+  cursor: pointer;
+  font-size: 1.1em;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button__secondary:hover, .button__secondary:focus {
+  background-color: #393e41;
+  color: #f8f4ff;
 }
 
 @-webkit-keyframes instruct {
@@ -182,14 +309,17 @@ a {
 .lotusbox {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 500px;
+  -ms-grid-rows: 300px;
   -ms-grid-columns: 500px;
-      grid-template: 500px / 500px;
+      grid-template: 300px / 500px;
   place-content: center;
+  position: absolute;
+  top: 60%;
+  left: 2%;
 }
 
 .lotusflower {
-  fill: black;
+  fill: #2193b0;
 }
 
 @-webkit-keyframes scroll {

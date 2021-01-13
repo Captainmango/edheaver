@@ -52,9 +52,7 @@ let lotusTimeLine = gsap.timeline({
         trigger: "#panel3",
         start: "top top",
         scrub: 0.7,
-        end: "+=300%",
-        pin: true,
-        pinSpacing: true
+        pin: true
     }
 })
 
@@ -66,7 +64,7 @@ lotusTimeLine.addLabel("petal2", 0.4)
 lotusTimeLine.addLabel("petal1", 0)
 lotusTimeLine.addLabel("end", 2.5)
 
-lotusTimeLine.from(".petal__center", {opacity: 0})
+lotusTimeLine.from(".petal__center", {opacity: 100})
     .from(".petal__left__6", {opacity: 0, rotation: 20, ease: "power2.inOut", transformOrigin: "left bottom", x: 50}, "petal6")
     .from(".petal__right__6", {opacity: 0, rotation: -20, ease: "power2.inOut", transformOrigin: "right bottom", x: -50}, "petal6")
     .from(".petal__left__5", {opacity: 0, rotation: 30, ease: "power2.inOut", transformOrigin: "left bottom", x: 140}, "petal5")
@@ -77,8 +75,8 @@ lotusTimeLine.from(".petal__center", {opacity: 0})
     .from(".petal__right__3", {opacity: 0, rotation: -60, ease: "power2.inOut", transformOrigin: "left bottom", x: -30}, "petal3")
     .from(".petal__left__2", {opacity: 0, rotation: 60, ease: "power2.inOut", transformOrigin: "left bottom", x: 300, y: -200}, "petal2")
     .from(".petal__right__2", {opacity: 0, rotation: -60, ease: "power2.inOut", transformOrigin: "left bottom", x: -200, y: -40}, "petal2")
-    .from(".petal__left__1", {opacity: 0, rotation: 62, ease: "power2.inOut", transformOrigin: "left bottom", x: 61, y: -210}, "petal1")
-    .from(".petal__right__1", {opacity: 0, rotation: -60, ease: "power2.inOut", transformOrigin: "left bottom", x: 50, y: -20}, "petal1")
+    .from(".petal__left__1", {opacity: 100, rotation: 62, ease: "power2.inOut", transformOrigin: "left bottom", x: 61, y: -210}, "petal1")
+    .from(".petal__right__1", {opacity: 100, rotation: -60, ease: "power2.inOut", transformOrigin: "left bottom", x: 50, y: -20}, "petal1")
 
 
 // ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
