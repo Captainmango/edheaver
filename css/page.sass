@@ -85,7 +85,7 @@ a
     z-index: -1
     width: 100%
     height: 100%
-    opacity: 90%
+    opacity: 100%
 
 .hero__container
     display: flex
@@ -158,9 +158,6 @@ p
 #panel3, #panel4
     position: relative
 
-#panel1
-    background: $btn-primary
-    mix-blend-mode: overlay
     
 
 .triangles
@@ -298,16 +295,27 @@ footer
     text-align: left
     display: block
     margin: 0 auto
+    position: relative
    
     p
         color: $panel-background
         line-height: 0
-        padding: 2em
+        padding: 1em
+        margin: 0 auto
     a
         padding: 0
 
     h3
-        padding: 2em
+        padding: 1em
+
+    .underline
+        content: ""
+        width: 30%
+        border: 1px $title-colour solid
+        display: inline
+        position: absolute
+        top: 30%
+        left: 18px
     .sociallinks
         display: flex
         justify-content: left
