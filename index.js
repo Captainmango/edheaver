@@ -50,9 +50,11 @@ gsap.registerPlugin(ScrollTrigger);
 let lotusTimeLine = gsap.timeline({
     scrollTrigger: {
         trigger: "#panel3",
-        start: "top top",
-        scrub: 0.7,
-        pin: true
+        start: "top top+=10%",
+        pin: true,
+        end: "end",
+        pinSpacing: false,
+        once: true
     }
 })
 
