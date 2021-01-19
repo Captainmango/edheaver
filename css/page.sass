@@ -183,13 +183,18 @@ p
     display: flex
     flex-shrink: 2
     flex-wrap: wrap
-    width: 700px
+    width: 80%
     padding-left: 4em
     font-size: 1.1em
 
 .contactme
+    display: flex
+    height: 12.5%
+    gap: 1em
     padding-left: 4em
     padding-top: 2em
+    flex-shrink: 0
+    flex-grow: 0
 
 
 .skills
@@ -348,16 +353,30 @@ footer
         border: 1px $title-colour solid
         display: inline
         position: absolute
-        top: 30%
+        top: 25%
         left: 18px
     .sociallinks
         display: flex
-        justify-content: left
+        justify-items: right
+        align-items: right
         list-style: none
         li
             padding: 1em
             color: $panel-background
 
+.footer__contents
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+    width: 50%
+.footer__bar
+    display: flex
+    justify-content: space-between
+    p
+        padding-top: 1em
+        margin: 0
 
 #chevron 
 
@@ -392,11 +411,76 @@ footer
     transform: skew(0deg, -8deg)
     
 
-.footer__contents
-    margin: 0 auto
-    display: flex
-    align-items: center
-    justify-content: center
-    width: 50%
+
 
 //media queries at 1200px and 1000px. Maybe also below 600px depending on sizing
+
+@media screen and ( max-width: 1200px )
+    .work__section
+        flex-direction: column
+        justify-items: center
+        align-items: center
+
+@media screen and ( max-width: 1000px )
+    .triangles
+        display: none
+    .aboutme__container
+        width: 70%
+
+@media screen and ( max-width: 840px )
+    .navbar
+        font-size: 12px
+    .hero__container
+        font-size: 12px
+        flex-direction: column
+        justify-content: center
+
+@media screen and ( max-width: 640px )
+    .aboutme__container
+        word-wrap: wrap
+
+        .aboutme__text
+            whitespace: normal
+    .contactme
+        width: 60%
+
+@media screen and ( max-width: 400px )
+    .panel
+        width: 150%
+        height: 200%
+
+    .navbar
+        font-size: 10px 
+    .hero__container
+        font-size: 10px 
+        
+    .mountains
+        object-fit: contain
+        width: 150%
+        height: 100% 
+        z-index: -1
+    .contactme
+        width: 80%
+    
+    .scrollIcon
+        display: none
+    
+    .work__content__text
+        width: 80%
+    
+    .contactme
+        height: 15%
+    
+    #panel3
+        padding-bottom: 4em
+
+    .skills__section
+        width: 100%
+
+    footer
+        width: 150%
+        
+    
+
+    
+    
