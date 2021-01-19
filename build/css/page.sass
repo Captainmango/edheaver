@@ -6,6 +6,7 @@ $btn-secondary: #a1c255
 $text-colour: #393e41
 $hero-colour: #2193b0
 $title-colour: #E07A5F
+$gap: 4em
 
 $background-start: linear-gradient(to right, #a8ff78, #78ffd6)
 $background-second: linear-gradient(to right, #11998e, #38ef7d)
@@ -122,12 +123,16 @@ a
     display: grid
     grid-template-columns: 1fr
     grid-template-rows: repeat(4, 1fr)
-    grid-gap: 4em
 
     .work__section
         display: flex
-        justify-content: center
-        gap: 4em
+        justify-content: space-around
+        flex-wrap: wrap
+        margin: calc(-1 * $gap) 0 0 calc(-1 * $gap)
+        width: calc(100% + $gap)
+
+        & > *
+            margin: $gap 0 0 $gap
 
         .picture
             max-width: 600px
@@ -183,9 +188,12 @@ p
     display: flex
     flex-shrink: 2
     flex-wrap: wrap
-    width: 80%
+    width: 60%
     padding-left: 4em
     font-size: 1.1em
+
+    .aboutme__container__text
+        width: 40%
 
 .contactme
     display: flex
@@ -461,6 +469,9 @@ footer
         z-index: -1
     .contactme
         width: 80%
+    
+    .aboutme__container__text
+        width: 60%
     
     .scrollIcon
         display: none

@@ -152,17 +152,22 @@ a:hover {
       grid-template-columns: 1fr;
   -ms-grid-rows: (1fr)[4];
       grid-template-rows: repeat(4, 1fr);
-  grid-gap: 4em;
 }
 
 .work__container .work__section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 4em;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: calc(-1 * $gap) 0 0 calc(-1 * $gap);
+  width: calc(100% + $gap);
+}
+
+.work__container .work__section > * {
+  margin: 4em 0 0 4em;
 }
 
 .work__container .work__section .picture {
@@ -231,9 +236,13 @@ p {
       flex-shrink: 2;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 80%;
+  width: 60%;
   padding-left: 4em;
   font-size: 1.1em;
+}
+
+.aboutme__container .aboutme__container__text {
+  width: 40%;
 }
 
 .contactme {
@@ -637,6 +646,9 @@ footer .sociallinks li {
   }
   .contactme {
     width: 80%;
+  }
+  .aboutme__container__text {
+    width: 60%;
   }
   .scrollIcon {
     display: none;
