@@ -186,12 +186,7 @@ a:hover {
 }
 
 .work__container .work__section .work__content .project__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  padding-top: 1em;
   gap: 1em;
 }
 
