@@ -171,8 +171,6 @@ a:hover {
 }
 
 .work__container .work__section .picture {
-  max-width: 600px;
-  max-height: 300px;
   height: 30vw;
   width: 60vw;
 }
@@ -236,7 +234,7 @@ p {
       flex-shrink: 2;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 60%;
+  width: 50%;
   padding-left: 4em;
   font-size: 1.1em;
 }
