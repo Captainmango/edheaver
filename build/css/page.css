@@ -171,8 +171,8 @@ a:hover {
 }
 
 .work__container .work__section .picture {
-  max-width: 750px;
-  max-height: 450px;
+  max-width: 600px;
+  max-height: 300px;
   height: 30vw;
   width: 60vw;
 }
