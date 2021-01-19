@@ -1,0 +1,20 @@
+{
+  "name": "edheaver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Captainmango/edheaver.git"
+  },
+  "keywords": [],
+  "author": "Edward Heaver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Captainmango/edheaver/issues"
+  },
+  "homepage": "https://github.com/Captainmango/edheaver#readme"
+}
