@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap')
+
+$panel-background: #f8f4ff
+$btn-primary: #e2c044
+$btn-secondary: #a1c255
+$text-colour: #393e41
+$hero-colour: #2193b0
+$title-colour: #E07A5F
+
+$background-start: linear-gradient(to right, #a8ff78, #78ffd6)
+$background-second: linear-gradient(to right, #11998e, #38ef7d)
+$background-third: linear-gradient(to right, #00f260, #0575e6)
+$background-fourth: linear-gradient(to right, #2193b0, #6dd5ed)
+
+
+
+@mixin panel
+    min-width: 100vw
+    min-height: 100vh
+
+.panel
+    @include panel
+   
+
+body
+  background: $panel-background
+  &::-webkit-scrollbar
+      display: none
+
+*, ::after, ::before 
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    font-family: "Lato", Arial
+
+.navbar
+    display: flex
+    justify-content: space-between
+    align-items: center
+    max-width: 100%
+    padding: 1.3em
+    padding-left: 3em
+    
+    .navlinks
+        display: flex
+        justify-content: space-between
+        list-style: none 
+        a
+            color: $text-colour
+            font-size: 1.3em
+            cursor: pointer
+    .sociallinks
+        display: flex
+        justify-content: space-between
+        list-style: none
+        a
+            color: $text-colour
+            font-size: 1.3em
+            cursor: pointer
+
+
+    
+a
+    text-decoration: none
+    padding: 0 1.2em
+    padding-top: 0.2em
+    padding-bottom: 0.2em
+    transition: 0.4s ease
+    &:hover
+        background-color: $hero-colour
+        border-radius: 5px
+
+        
+
+.logo
+    font-weight: bold
+    font-size: 1.3em
+    color: $title-colour
+    a
+        color: $title-colour
+
+
+.mountains
+    position: absolute
+    top: 0
+    left: 0
+    object-fit: cover
+    z-index: -1
+    width: 100%
+    height: 100%
+    opacity: 100%
+
+.hero__container
+    display: flex
+    flex-direction: column
+    align-items: right
+    padding: 10% 5em
+    width: 80vh
+    height: 80vh
+    .headline
+        font-size: 5em
+        color: $hero-colour
+        padding-bottom: 0.4em
+        width: 10em
+    .description
+        font-size: 3em
+        color: $hero-colour
+        padding-bottom: 0.4em
+
+    .process
+        font-size: 1.5em
+        color: $hero-colour
+
+.work__title
+    padding: 1.5em
+    font-size: 3em
+    color: $title-colour
+
+.work__container
+    margin: 0 auto
+    width: 80%
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: repeat(4, 1fr)
+    grid-gap: 4em
+
+    .work__section
+        display: flex
+        justify-content: center
+        gap: 4em
+
+        .picture
+            max-width: 600px
+            max-height: 300px
+            height: 30vw
+            width: 60vw
+            img
+                height: 100%
+                width: 100%
+
+        
+        .work__content
+            width: 500px
+            text-align: left
+            justify-content: center
+
+            .project__buttons
+                padding-top: 1em
+                gap: 1em
+.project__title
+    padding-bottom: 1em
+
+p
+    padding-bottom: 1em
+    line-height: 1.4em
+    min-width: 350px
+    white-space: normal
+
+
+#panel3, #panel4
+    position: relative
+
+    
+
+.triangles
+    position: absolute
+    left: 60%
+    top: 15%
+    height: 50vh
+    width: 50vh
+    opacity: 30%
+    z-index: -1
+
+.aboutme
+    padding-left: 1.5em
+    padding-bottom: 1em
+    padding-top: 1.5em
+    font-size: 3em
+    color: $title-colour
+
+
+.aboutme__container
+    display: flex
+    flex-shrink: 2
+    flex-wrap: wrap
+    width: 80%
+    padding-left: 4em
+    font-size: 1.1em
+
+.contactme
+    display: flex
+    height: 12.5%
+    gap: 1em
+    padding-left: 4em
+    padding-top: 2em
+    flex-shrink: 0
+    flex-grow: 0
+
+
+.skills
+    padding: 1.5em
+    font-size: 3em
+    color: $title-colour
+
+.skills__container
+    margin: 0 auto
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    width: 90%
+    font-size: 1.1em
+
+.skills__section
+    margin: 1em
+    height: 50vh
+    width: 40vh
+    display: grid
+    grid-template-columns: 1fr
+    grid-template-rows: 40% auto
+    background: fade-out(white, 0.5)
+    border-radius: 5px
+    border: 2px white solid
+
+.skills__section__text
+    grid-row: 2 / 3
+    font-size: 0.9em
+    padding: 1em
+    place-content: center
+    align-self: top
+
+.icon__container
+    grid-row: 0 / 1
+    align-self: center
+    justify-self: center
+
+.skills__container__title
+    text-align: center
+    padding-bottom: 1em
+
+
+.button__primary
+    appearance: none
+    background-color: $btn-primary
+    border: 0
+    padding: 10px 15px
+    color: $text-colour
+    border-radius: 3px
+    width: 150px
+    cursor: pointer
+    font-size: 1.1em
+    transition-duration: 0.25s
+    font-weight: 600
+    cursor: pointer
+    
+    &:hover, &:focus
+      background-color: $text-colour
+      color: $panel-background
+
+.button__secondary
+    appearance: none
+    background-color: $btn-secondary
+    border: 0
+    padding: 10px 15px
+    color: $text-colour
+    border-radius: 3px
+    width: 120px
+    cursor: pointer
+    font-size: 1.1em
+    transition-duration: 0.25s
+    font-weight: 600
+    cursor: pointer
+    
+    &:hover, &:focus
+      background-color: $text-colour
+      color: $panel-background
+
+.button__tertiary
+    appearance: none
+    background-color: $title-colour
+    border: 0
+    padding: 10px 15px
+    color: $text-colour
+    border-radius: 3px
+    width: 120px
+    cursor: pointer
+    font-size: 1.1em
+    transition-duration: 0.25s
+    font-weight: 600
+    cursor: pointer
+    
+    &:hover, &:focus
+      background-color: $text-colour
+      color: $panel-background
+
+@keyframes instruct
+    0%
+        transfrom: scale(1)
+    30%
+        transform: scale(1.1)
+
+.scrollIcon
+    display: block
+    padding-left: 5em
+
+
+.lotusbox
+    display: grid
+    grid-template: 300px / 500px
+    place-content: center
+    position: absolute
+    top: 60%
+    left: 2%
+    
+
+
+.lotusflower
+    fill: $hero-colour
+
+@keyframes scroll 
+	0% 
+		transform: translateY(0)
+	
+	30% 
+		transform: translateY(60px)
+	
+svg #wheel 
+	animation: scroll ease 2s infinite
+    fill: $text-colour
+
+footer
+    background: $text-colour
+    text-align: left
+    display: block
+    margin: 0 auto
+    position: relative
+   
+    p
+        color: $panel-background
+        line-height: 0
+        padding: 1em
+        margin: 0 auto
+    a
+        padding: 0
+        color: $panel-background
+
+    h3
+        padding: 1em
+        color: $panel-background
+
+    .underline
+        content: ""
+        width: 30%
+        border: 1px $title-colour solid
+        display: inline
+        position: absolute
+        top: 25%
+        left: 18px
+    .sociallinks
+        display: flex
+        justify-items: right
+        align-items: right
+        list-style: none
+        li
+            padding: 1em
+            color: $panel-background
+
+.footer__contents
+    margin: 0 auto
+    display: flex
+    flex-direction: column
+    align-content: center
+    justify-content: center
+    width: 50%
+.footer__bar
+    display: flex
+    justify-content: space-between
+    p
+        padding-top: 1em
+        margin: 0
+
+#chevron 
+
+    margin: 0 auto
+    position: absolute
+    top: 75%
+    left: 37%
+    text-align: center
+    padding: 12px
+    height: 60px
+    width: 25%
+    opacity: 40%
+
+#chevron:before 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 51%
+    background: $hero-colour
+    transform: skew(0deg, 8deg)
+
+#chevron:after 
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    width: 50%
+    background: $hero-colour
+    transform: skew(0deg, -8deg)
+    
+
+
+
+//media queries at 1200px and 1000px. Maybe also below 600px depending on sizing
+
+@media screen and ( max-width: 1200px )
+    .work__section
+        flex-direction: column
+        justify-items: center
+        align-items: center
+
+@media screen and ( max-width: 1000px )
+    .triangles
+        display: none
+    .aboutme__container
+        width: 70%
+
+@media screen and ( max-width: 840px )
+    .navbar
+        font-size: 12px
+    .hero__container
+        font-size: 12px
+        flex-direction: column
+        justify-content: center
+
+@media screen and ( max-width: 640px )
+    .aboutme__container
+        word-wrap: wrap
+
+        .aboutme__text
+            whitespace: normal
+    .contactme
+        width: 60%
+
+@media screen and ( max-width: 400px )
+    .panel
+        width: 150%
+        height: 200%
+
+    .navbar
+        font-size: 10px 
+    .hero__container
+        font-size: 10px 
+        
+    .mountains
+        object-fit: contain
+        width: 150%
+        height: 100% 
+        z-index: -1
+    .contactme
+        width: 80%
+    
+    .scrollIcon
+        display: none
+    
+    .work__content__text
+        width: 80%
+    
+    .contactme
+        height: 15%
+    
+    #panel3
+        padding-bottom: 4em
+
+    .skills__section
+        width: 100%
+
+    footer
+        width: 150%
+        
+    
+
+    
+    
