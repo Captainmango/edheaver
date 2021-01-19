@@ -16,14 +16,6 @@ jobs:
         with:
           node-version: '12'
 
-      # Install npm packages
-      - name: Install packages
-        run: npm install
-
-      # Build react app
-      - name: Build the app
-        run: npm run build
-
       # Install Surge 
       - name: Install Surge
         run: npm install -g surge
