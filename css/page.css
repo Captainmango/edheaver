@@ -18,7 +18,6 @@ body::-webkit-scrollbar {
   margin: 0;
   padding: 0;
   font-family: "Lato", Arial;
-  color: #393e41;
 }
 
 .navbar {
@@ -60,6 +59,12 @@ body::-webkit-scrollbar {
       -ms-flex-pack: justify;
           justify-content: space-between;
   list-style: none;
+}
+
+.navbar .sociallinks a {
+  color: #393e41;
+  font-size: 1.3em;
+  cursor: pointer;
 }
 
 a {
@@ -208,7 +213,7 @@ p {
 .triangles {
   position: absolute;
   left: 60%;
-  top: 40%;
+  top: 15%;
   height: 50vh;
   width: 50vh;
   opacity: 30%;
@@ -234,6 +239,11 @@ p {
   width: 700px;
   padding-left: 4em;
   font-size: 1.1em;
+}
+
+.contactme {
+  padding-left: 4em;
+  padding-top: 2em;
 }
 
 .skills {
@@ -282,6 +292,20 @@ p {
       align-self: top;
 }
 
+.icon__container {
+  grid-row: 0 / 1;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.skills__container__title {
+  text-align: center;
+  padding-bottom: 1em;
+}
+
 .button__primary {
   -webkit-appearance: none;
      -moz-appearance: none;
@@ -324,6 +348,29 @@ p {
 }
 
 .button__secondary:hover, .button__secondary:focus {
+  background-color: #393e41;
+  color: #f8f4ff;
+}
+
+.button__tertiary {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #E07A5F;
+  border: 0;
+  padding: 10px 15px;
+  color: #393e41;
+  border-radius: 3px;
+  width: 120px;
+  cursor: pointer;
+  font-size: 1.1em;
+  -webkit-transition-duration: 0.25s;
+          transition-duration: 0.25s;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button__tertiary:hover, .button__tertiary:focus {
   background-color: #393e41;
   color: #f8f4ff;
 }
@@ -398,7 +445,7 @@ svg #wheel {
 }
 
 footer {
-  background: #2193b0;
+  background: #393e41;
   text-align: left;
   display: block;
   margin: 0 auto;
@@ -414,10 +461,12 @@ footer p {
 
 footer a {
   padding: 0;
+  color: #f8f4ff;
 }
 
 footer h3 {
   padding: 1em;
+  color: #f8f4ff;
 }
 
 footer .underline {
@@ -442,6 +491,43 @@ footer .sociallinks {
 
 footer .sociallinks li {
   padding: 1em;
+  color: #f8f4ff;
+}
+
+#chevron {
+  margin: 0 auto;
+  position: absolute;
+  top: 75%;
+  left: 37%;
+  text-align: center;
+  padding: 12px;
+  height: 60px;
+  width: 25%;
+  opacity: 40%;
+}
+
+#chevron:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 51%;
+  background: #2193b0;
+  -webkit-transform: skew(0deg, 8deg);
+          transform: skew(0deg, 8deg);
+}
+
+#chevron:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  background: #2193b0;
+  -webkit-transform: skew(0deg, -8deg);
+          transform: skew(0deg, -8deg);
 }
 
 .footer__contents {

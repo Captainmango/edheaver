@@ -32,7 +32,6 @@ body
     margin: 0
     padding: 0
     font-family: "Lato", Arial
-    color: $text-colour
 
 .navbar
     display: flex
@@ -54,6 +53,10 @@ body
         display: flex
         justify-content: space-between
         list-style: none
+        a
+            color: $text-colour
+            font-size: 1.3em
+            cursor: pointer
 
 
     
@@ -163,7 +166,7 @@ p
 .triangles
     position: absolute
     left: 60%
-    top: 40%
+    top: 15%
     height: 50vh
     width: 50vh
     opacity: 30%
@@ -184,6 +187,11 @@ p
     width: 700px
     padding-left: 4em
     font-size: 1.1em
+
+.contactme
+    padding-left: 4em
+    padding-top: 2em
+
 
 .skills
     padding: 1.5em
@@ -216,7 +224,14 @@ p
     place-content: center
     align-self: top
 
+.icon__container
+    grid-row: 0 / 1
+    align-self: center
+    justify-self: center
 
+.skills__container__title
+    text-align: center
+    padding-bottom: 1em
 
 
 .button__primary
@@ -240,6 +255,24 @@ p
 .button__secondary
     appearance: none
     background-color: $btn-secondary
+    border: 0
+    padding: 10px 15px
+    color: $text-colour
+    border-radius: 3px
+    width: 120px
+    cursor: pointer
+    font-size: 1.1em
+    transition-duration: 0.25s
+    font-weight: 600
+    cursor: pointer
+    
+    &:hover, &:focus
+      background-color: $text-colour
+      color: $panel-background
+
+.button__tertiary
+    appearance: none
+    background-color: $title-colour
     border: 0
     padding: 10px 15px
     color: $text-colour
@@ -291,7 +324,7 @@ svg #wheel
     fill: $text-colour
 
 footer
-    background: $hero-colour
+    background: $text-colour
     text-align: left
     display: block
     margin: 0 auto
@@ -304,9 +337,11 @@ footer
         margin: 0 auto
     a
         padding: 0
+        color: $panel-background
 
     h3
         padding: 1em
+        color: $panel-background
 
     .underline
         content: ""
@@ -322,6 +357,41 @@ footer
         list-style: none
         li
             padding: 1em
+            color: $panel-background
+
+
+#chevron 
+
+    margin: 0 auto
+    position: absolute
+    top: 75%
+    left: 37%
+    text-align: center
+    padding: 12px
+    height: 60px
+    width: 25%
+    opacity: 40%
+
+#chevron:before 
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    height: 100%
+    width: 51%
+    background: $hero-colour
+    transform: skew(0deg, 8deg)
+
+#chevron:after 
+    content: ''
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    width: 50%
+    background: $hero-colour
+    transform: skew(0deg, -8deg)
+    
 
 .footer__contents
     margin: 0 auto
