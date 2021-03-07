@@ -1,0 +1,15 @@
+<svg width="287" height="303" viewBox="0 0 287 303" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M286 77V2L215 77H286Z" fill="#2193B0" stroke="black"/>
+    <path d="M286 227V152L215 227H286Z" fill="#E2C044" stroke="black"/>
+    <path d="M215 227V152L144 227H215Z" fill="#2193B0" stroke="black"/>
+    <path d="M215 152V77L144 152H215Z" fill="#E2C044" stroke="black"/>
+    <path d="M144 152V77L73 152H144Z" fill="#E07A5F" stroke="black"/>
+    <path d="M144 152V77L73 152H144Z" fill="#E07A5F" stroke="black"/>
+    <path d="M73 227V152L2 227H73Z" fill="#A1C255" stroke="black"/>
+    <path d="M286 152V77L215 152H286Z" fill="#A1C255" stroke="black"/>
+    <path d="M215 302V227L144 302H215Z" fill="#C4C4C4" stroke="black"/>
+    <path d="M144 302V227L73 302H144Z" fill="#393E41" stroke="black"/>
+    <path d="M286 302V227L215 302H286Z" fill="#E07A5F" stroke="black"/>
+    <path d="M144 227V152L73 227H144Z" fill="#393E41" stroke="black"/>
+    <path d="M73 302V227L2 302H73Z" fill="#C4C4C4" stroke="black"/>
+</svg>
