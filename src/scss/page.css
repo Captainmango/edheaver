@@ -11331,15 +11331,6 @@ fieldset:disabled .btn {
   }
 }
 
-.panel {
-  min-width: 100vw;
-  min-height: 100vh;
-}
-
-.span-page {
-  min-width: 100%;
-}
-
 body {
   background: #f8f4ff;
 }
@@ -11357,9 +11348,6 @@ body::-webkit-scrollbar {
 }
 
 .mountains {
-  position: absolute;
-  top: 0;
-  left: 0;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: -1;

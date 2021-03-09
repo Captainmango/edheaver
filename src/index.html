@@ -9,9 +9,8 @@
     <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
 </head>
     <body>
-
-            <div id="panel1" class="panel">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed" style="width: 100%;">
+            <div class="navbar-container">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="width: 100%;">
                     <div class="container">
                         <a class="navbar-brand" href="#panel1">Ed Heaver</a>
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,34 +40,135 @@
                                 <li class="nav-item"><a class="nav-link" href="https://twitter.com/EdwardHeaver6"><i class="fab fa-twitter"></i></a></li>
                             </ul>
                         </div>
-                      
-
                 </nav>
             </div>
 
 
-                <!-- <div class="hero__container">
-                    <h2 class="headline">Making journeys easier with software</h2>
-                    <h3 class="description">End to end</h3>
-                    <h4 class="process">One step at a time</h4>
-                </div> -->
-
+            <div id="panel1" class="panel">
                 <video src="./static/sunsetmountains.mp4" class="mountains" muted loop autoplay preload="auto"></video>
-
-                <!-- <div class="scrollIcon">
-                    <svg class="scrollWheel" width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-                        <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
-                        <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
-                    </svg> -->
+                <div class="container-fluid position-absolute text-center top-50 start-50 translate-middle text-light ">
+                    <h2 class="display-3 fw-bold">Making journeys easier with software</h2>
+                    <h3 class="display-4">End to end <br> One step at a time</h3>
+                    <div class="scrollIcon">
+                        <svg class="scrollWheel" width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                            <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+                            <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+                        </svg>
+                    </div>
                 </div>
+
             </div>
 
-            <div id="panel2" class="panel content">
-                <!-- My work have cards with screenshots of projects and small about me section focused on technical skills-->
-                <h2 class="work__title">My work</h2>
-                <div class="work__container">
+            
+            <section class="text-center p-5 m-5">
+                <div class="container-lg">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-sm-12">
+                            <h2 class="display-4 fw-bolder">Take a look at some of my projects</h2>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div id="panel2" class="position-relative">
+                <section class="p-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./static/IntegralCRM.png" alt="IntegralCRM screenshot" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                   <h2 class="h1 pb-3">IntegralCRM</h2>
+                                   <p class="lead">
+                                       A complaints management system built using Ruby and Sinatra, a simple open source web library.
+                                        Styled with W3.CSS and erb.</p>
+                                   <ul class="list-unstyled my-3">
+                                       <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Google sign on via OAuth2.0</span></li>
+                                       <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">PostgreSQL database</span></li>
+                                       <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">MVC using ActiveRecord</span></li>
+                                   </ul>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="https://github.com/Captainmango/IntegralCRM" class="btn btn-primary mx-2">Go to Repo</a>
+                                    <!-- <a href="https://drive.google.com/file/d/1XMmpe-viF6LPsqs-I4VqVFCBGBYHvOui/view?usp=sharing" class="btn btn-secondary"target="_blank">Video Demo</a> -->
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="p-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./static/CobaltTableManager.png" alt="Cobalt Table Manager screenshot" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <h2 class="h1 pb-3">Cobalt Table Manager</h2>
+                                    <p class="lead">
+                                        A table reservation app desgined to make reserving a table as simple as possible.
+                                        Uses ReactJS on the front end and a Ruby on Rails API.
+                                    </p>
+                                    <ul class="list-unstyled my-3">
+                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Twilio API to send SMS to confirm bookings</span></li>
+                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Fuzzy search endpoint on the API</span></li>
+                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">User authentication using JWT</span></li>
+                                    </ul>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="https://github.com/Captainmango/Cobalt_Table_Manager" class="btn btn-primary mx-2" target="_blank">Go to Repo</a>
+                                    <a href="https://drive.google.com/file/d/1x_6PWq_FjPqpb5gDvUwW1DNdqzxGw-I-/view?usp=sharing" class="btn btn-secondary mx-2" target="_blank">Video Demo</a>
+                                    <a href="https://cobalt-tbl-manager-client.herokuapp.com/" class="btn btn-dark mx-2" target="_blank">Live Demo</a>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="p-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <img src="./static/IWANTBOOKS.png" alt="IWantBooks screenshot" class="img-fluid">
+                        </div>
+                        <div class="col">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-10">
+                                    <h2 class="h1 pb-3">IWANTBOOKS</h2>
+                                    <p class="lead">
+                                        A social media library app that allows users to add books to their libraries and comment on them
+                                        Built using Ruby on Rails and styled using Bootstrap 4.
+                                    </p>
+                                    <ul class="list-unstyled my-3">
+                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Google sign on via OAuth2.0</span></li>
+                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Embeded reader inside of app</span></li>
+                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Google Books API search integration</span></li>
+                                    </ul>
+
+                                <div class="d-flex justify-content-center">
+                                    <a href="https://github.com/Captainmango/IWantBooks" class="btn btn-primary mx-2">Go to Repo</a>
+                                    <a href="https://drive.google.com/file/d/1XMmpe-viF6LPsqs-I4VqVFCBGBYHvOui/view?usp=sharing" class="btn btn-secondary mx-2"target="_blank">Video Demo</a>
+                                </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+                
+                
+                <!-- <div class="work__container">
                     <div class="work__section">
-                        <div class="picture"><img src="./static/IntegralCRM.png" alt="IntegralCRM screenshot"></div>
+                        <div class="picture"></div>
                         <div class="work__content">
                             <h3 class="project__title">Integral CRM</h3>
                             <p class="work__content__text">I used my experience as a Customer Service rep to really delve into producing 
@@ -84,7 +184,7 @@
                         </div>
                     </div>
                     <div class="work__section">
-                        <div class="picture"><img src="./static/IWANTBOOKS.png" alt="IntegralCRM screenshot"></div>
+                        <div class="picture"><img src="./static/IWANTBOOKS.png" class="img-fluid" alt="IntegralCRM screenshot"></div>
                         <div class="work__content">
                             <h3 class="project__title">IWANTBOOKS</h3>
                             <p class="work__content__text">
@@ -104,7 +204,7 @@
                     </div>
 
                     <div class="work__section">
-                        <div class="picture"><img src="./static/IntegralCRM.png" alt="IntegralCRM screenshot"></div>
+                        <div class="picture"><img src="./static/IntegralCRM.png" class="img-fluid" alt="IntegralCRM screenshot"></div>
                         <div class="work__content">
                             <h3 class="project__title">Cobalt Table Manager</h3>
                             <p class="work__content__text">
@@ -122,15 +222,15 @@
                         </div>
 
                     </div>
-                </div>
+                </div> -->
                 
             </div>
            
             
         
-            <div id="panel3" class="panel content">
+            <!-- <div id="panel3" class="panel content">
                 <h2 class="aboutme">About me</h2>
-                <!-- About me section focus on me as a person -->
+    
                 <div class="aboutme__container">
                     <p class="aboutme__text">
                         Hi I’m Ed. I’m all about easy, end to end journeys for users in all aspects of what software I build. As a full stack web developer, 
@@ -218,7 +318,7 @@
                     <li><a href="https://twitter.com/EdwardHeaver6"><i class="fab fa-twitter"></i></a></li>
                 </ul>
                 </div>
-            </footer>
+            </footer> -->
     
         <script src="index.js"></script>
     </body>

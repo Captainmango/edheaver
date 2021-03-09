@@ -9,18 +9,7 @@ $background-second: linear-gradient(to right, #11998e, #38ef7d)
 $background-third: linear-gradient(to right, #00f260, #0575e6)
 $background-fourth: linear-gradient(to right, #2193b0, #6dd5ed)
 
-
-
-@mixin panel 
-    min-width: 100vw
-    min-height: 100vh
-
-
-.panel
-    @include panel
-
-.span-page
-    min-width: 100%  
+ 
 
 body
   background: $panel-background
@@ -35,9 +24,6 @@ body
 
 
 .mountains
-    position: absolute
-    top: 0
-    left: 0
     object-fit: cover
     z-index: -1
     width: 100%
