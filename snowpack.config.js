@@ -6,6 +6,7 @@ module.exports = {
   mount: {
     "src": "/build",
     "public": "/src"
+    
   },
   plugins: [
     /* ... */
