@@ -11347,13 +11347,13 @@ body::-webkit-scrollbar {
   font-family: "Lato", Arial;
 }
 
-.mountains {
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  opacity: 100%;
+#landing {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("../static/mountains.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 @-webkit-keyframes instruct {
@@ -11378,7 +11378,7 @@ body::-webkit-scrollbar {
 
 .scrollIcon {
   display: block;
-  padding-left: 5em;
+  padding-top: 100px;
 }
 
 @-webkit-keyframes scroll {
@@ -11407,87 +11407,5 @@ svg #wheel {
   -webkit-animation: scroll ease 2s infinite;
           animation: scroll ease 2s infinite;
   fill: #393e41;
-}
-
-footer {
-  background: #393e41;
-  text-align: left;
-  display: block;
-  margin: 0 auto;
-  position: relative;
-}
-
-footer p {
-  color: #f8f4ff;
-  line-height: 0;
-  padding: 1em;
-  margin: 0 auto;
-}
-
-footer a {
-  padding: 0;
-  color: #f8f4ff;
-}
-
-footer h3, footer .h3 {
-  padding: 1em;
-  color: #f8f4ff;
-}
-
-footer .underline {
-  content: "";
-  width: 30%;
-  border: 1px #E07A5F solid;
-  display: inline;
-  position: absolute;
-  top: 25%;
-  left: 18px;
-}
-
-footer .sociallinks {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  justify-items: right;
-  -webkit-box-align: right;
-      -ms-flex-align: right;
-          align-items: right;
-  list-style: none;
-}
-
-footer .sociallinks li {
-  padding: 1em;
-  color: #f8f4ff;
-}
-
-.footer__contents {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 50%;
-}
-
-.footer__bar {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.footer__bar p {
-  padding-top: 1em;
-  margin: 0;
 }
 /*# sourceMappingURL=page.css.map */

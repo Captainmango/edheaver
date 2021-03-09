@@ -23,12 +23,14 @@ body
     font-family: $font-family
 
 
-.mountains
-    object-fit: cover
-    z-index: -1
-    width: 100%
-    height: 100%
-    opacity: 100%
+
+#landing
+    min-height: 100vh
+    min-width: 100vw
+    background-image: url("../static/mountains.jpg")
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: center
 
 
 
@@ -40,7 +42,7 @@ body
 
 .scrollIcon
     display: block
-    padding-left: 5em
+    padding-top: 100px
     
 
 @keyframes scroll 
@@ -54,56 +56,7 @@ svg #wheel
     animation: scroll ease 2s infinite
     fill: $text-colour
 
-footer
-    background: $text-colour
-    text-align: left
-    display: block
-    margin: 0 auto
-    position: relative
-   
-    p
-        color: $panel-background
-        line-height: 0
-        padding: 1em
-        margin: 0 auto
-    a
-        padding: 0
-        color: $panel-background
 
-    h3
-        padding: 1em
-        color: $panel-background
-
-    .underline
-        content: ""
-        width: 30%
-        border: 1px $title-colour solid
-        display: inline
-        position: absolute
-        top: 25%
-        left: 18px
-    .sociallinks
-        display: flex
-        justify-items: right
-        align-items: right
-        list-style: none
-        li
-            padding: 1em
-            color: $panel-background
-
-.footer__contents
-    margin: 0 auto
-    display: flex
-    flex-direction: column
-    align-content: center
-    justify-content: center
-    width: 50%
-.footer__bar
-    display: flex
-    justify-content: space-between
-    p
-        padding-top: 1em
-        margin: 0
     
 
 
