@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "parcel serve src/index.html",
-    "build": "parcel build src/index.html --dist-dir build"
+    "build": "parcel build src/index.html --out-dir build"
   },
   "repository": {
     "type": "git",
@@ -21,7 +21,7 @@
   "homepage": "https://github.com/Captainmango/edheaver#readme",
   "devDependencies": {
     "bootstrap": "^5.0.0-beta2",
-    "parcel": "^2.0.0-beta.1",
+    "parcel": "^1.12.3",
     "sass": "^1.32.8"
   }
 }
