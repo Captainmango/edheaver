@@ -22,4 +22,4 @@ jobs:
 
       # Deploy to the defined URL using the token
       - name: Deploy to surge
-        run: surge ./build/build https://edheaver.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./build https://edheaver.surge.sh --token ${{secrets.SURGE_TOKEN}}

@@ -11350,7 +11350,7 @@ body::-webkit-scrollbar {
 #landing {
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("../static/mountains.jpg");
+  background-image: url("./static/mountains.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

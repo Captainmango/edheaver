@@ -4,8 +4,8 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 module.exports = {
   mount: {
-    "src": "/build",
-    "public": "/src"
+    "src": "/src",
+    "public": "/"
     
   },
   plugins: [
