@@ -3,7 +3,6 @@
 @import '../node_modules/bootstrap/scss/bootstrap.scss';
 @import "_variables";
 
-
 $gap: 4em;
 
 $background-start: linear-gradient(to right, #a8ff78, #78ffd6);
@@ -17,6 +16,7 @@ body {
     display: none;
   }
 }
+
 *,
 ::after,
 ::before {
@@ -26,7 +26,6 @@ body {
   font-family: $font-family;
 }
 
-
 #landing {
   min-height: 100vh;
   min-width: 100vw;
@@ -35,7 +34,6 @@ body {
   background-size: cover;
   background-position: center;
 }
-
 
 @keyframes instruct {
   0% {
