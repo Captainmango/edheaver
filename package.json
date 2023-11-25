@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "Portfolio website",
   "main": "index.html",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "snowpack dev",
-    "build": "snowpack build"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Captainmango/edheaver.git"
@@ -22,5 +18,8 @@
   "devDependencies": {
     "bootstrap": "^5.0.0-beta2",
     "sass": "^1.32.8"
+  },
+  "dependencies": {
+    "astro": "^3.6.0"
   }
 }
