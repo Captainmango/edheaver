@@ -21,7 +21,6 @@
   "homepage": "https://github.com/Captainmango/edheaver#readme",
   "devDependencies": {
     "bootstrap": "^5.0.0-beta2",
-    "sass": "^1.32.8",
-    "snowpack": "^3.0.13"
+    "sass": "^1.32.8"
   }
 }
