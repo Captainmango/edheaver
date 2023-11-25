@@ -9,8 +9,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "watch-sass": "sass --watch ./scss/page.css ./src/styles/page.css",
-    "compile-sass": "sass ./scss/page.css ./src/styles/page.css"
+    "watch-sass": "sass --watch ./scss/page.scss ./src/styles/page.css",
+    "compile-sass": "sass ./scss/page.scss ./src/styles/page.css"
   },
   "repository": {
     "type": "git",
