@@ -28,6 +28,10 @@ main {
   background-position: center;
 }
 
+p {
+  font-size: clamp(12px, 4vw, 20px);
+}
+
 .text-hero {
   font-size: 4rem;
 }
@@ -41,6 +45,18 @@ main {
   margin-left: auto;
   margin-right: auto;
   width: 50%;
+}
+
+.d-inline-flex {
+  flex-direction: row;
+  gap: $gap;
+}
+
+@media only screen and (max-width: 950px) {
+  .d-inline-flex {
+    gap: calc($gap / 4);
+    flex-direction: column;
+  }
 }
 
 @keyframes instruct {
