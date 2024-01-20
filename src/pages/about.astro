@@ -1,15 +1,16 @@
 ---
 import Main from '../components/layouts/Main.astro'
 import AboutMeCard from '../components/AboutMeCard.astro';
+import Timeline from '../components/Timeline.astro'
 ---
 
 <Main>
     <dir class="d-inline-flex">
-        <div class="columns grid-lg p-2">
+        <div class="columns grid-lg p-2" style="min-width:50%;">
             <AboutMeCard />
         </div>
-        <div class="columns grid-lg p-2">
-            <AboutMeCard />
+        <div class="columns grid-lg p-2" style="min-width:50%;">
+            <Timeline />
         </div>
     </dir>
 </Main>

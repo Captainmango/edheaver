@@ -1,8 +1,9 @@
-@import 'node_modules/@vianetz/spectre.css/src/spectre.scss';
 @import '_variables';
+@import 'node_modules/@vianetz/spectre.css/src/spectre.scss';
+@import 'node_modules/@vianetz/spectre.css/src/_timelines.scss';
 @import '_viewport';
 
-$gap: 4em;
+$gap: 2rem;
 
 body {
   &::-webkit-scrollbar {
@@ -17,6 +18,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: $font-family;
+  color: $dark-color;
 }
 
 main {
