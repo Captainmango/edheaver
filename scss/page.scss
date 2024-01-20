@@ -1,14 +1,7 @@
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
 @import "_variables";
 
 $gap: 4em;
-
-$background-start: linear-gradient(to right, #a8ff78, #78ffd6);
-$background-second: linear-gradient(to right, #11998e, #38ef7d);
-$background-third: linear-gradient(to right, #00f260, #0575e6);
-$background-fourth: linear-gradient(to right, #2193b0, #6dd5ed);
 
 body {
   &::-webkit-scrollbar {

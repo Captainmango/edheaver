@@ -24,7 +24,6 @@
   },
   "homepage": "https://github.com/Captainmango/edheaver#readme",
   "devDependencies": {
-    "bootstrap": "^5.0.0-beta2",
     "sass": "^1.69.5"
   },
   "dependencies": {
