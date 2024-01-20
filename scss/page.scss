@@ -1,5 +1,6 @@
-
-@import "_variables";
+@import 'node_modules/@vianetz/spectre.css/src/spectre.scss';
+@import '_variables';
+@import '_viewport';
 
 $gap: 4em;
 
@@ -18,13 +19,28 @@ body {
   font-family: $font-family;
 }
 
-#landing {
+main {
   min-height: 100vh;
   min-width: 100vw;
   background-image: url("./static/background-clouds.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.text-hero {
+  font-size: 4rem;
+}
+
+.o-33 {
+  background-color: rgba(255, 255, 255, 0.33);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
 
 @keyframes instruct {
