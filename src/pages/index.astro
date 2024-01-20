@@ -1,5 +1,11 @@
 ---
 import '../styles/page.css'
+import Navbar from '../components/Navbar.astro'
+import SkillsContainer from '../components/SkillsContainer.astro'
+import ScrollIcon from '../components/ScrollIcon.astro'
+import Footer from '../components/Footer.astro'
+import Tagline from '../components/Tagline.astro'
+import AboutMe from '../components/AboutMe.astro'
 ---
 
 <!DOCTYPE html>
@@ -12,172 +18,16 @@ import '../styles/page.css'
         <script defer src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" integrity="sha384-9/D4ECZvKMVEJ9Bhr3ZnUAF+Ahlagp1cyPC7h5yDlZdXs4DQ/vRftzfd+2uFUuqS" crossorigin="anonymous"></script>
     </head>
     <body>
-            <div class="navhar-container" style="min-height: 73px; margin-bottom: -73px;">
-                <nav class="navbar navbar-expand-lg navbar-dark bg-dark position-fixed" style="width: 100%; z-index: 99999;">
-
-                    <div class="container">
-                        <a class="navbar-brand mb-2" href="#landing"><img src="./static/Ed Heaver.svg"></a>
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_buttons" aria-controls="nav_buttons" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-
-
-                        <div id="nav_buttons" class="collapse navbar-collapse justify-content-between align-items-center">
-                            <div class="py-2 py-lg-2">
-                                <ul class="navbar-nav">
-                                    <li class="nav-item"><a class="nav-link" href="#my_work">My Work</a></li>
-                                    <li class="nav-item"><a class="nav-link" href="#about_me">About Me</a></li>
-
-                                </ul>
-                            </div>
-                            <div class="py-2 py-lg-0 d-flex">
-                                <ul class="navbar-nav list-group-horizontal">
-                                    <li class="nav-item px-2"><a class="nav-link" href="https://github.com/Captainmango" target="_blank"><i class="fab fa-github"></i></a></li>
-                                    <li class="nav-item px-2"><a class="nav-link" href="https://www.linkedin.com/in/edward-heaver-9ba556a0/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                                    <li class="nav-item px-2"><a class="nav-link" href="https://twitter.com/EdwardHeaver6"><i class="fab fa-twitter"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                </nav>
-            </div>
-
-            <div class="">
+        <Navbar />
+        <main>
             <section class="min-vh-70 o-hidden d-flex flex-column justify-content-center h-100" id="landing">
-
                 <div class="container text-light text-center">
-                    <div class="row">
-                        <h2 class="display-3 fw-bold text-center">Making journeys easier <br> with software</h2>
-                        <h3 class="display-5 fw-bolder text-center">End to end <br> One step at a time</h3>
-                    </div>
-
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="scrollIcon">
-                        <svg class="scrollWheel" width="40px" height="100%" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
-                            <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
-                            <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
-                        </svg>
-                    </div>
-                    </div>
-                </div>
-
-            </section>
-
-
-            <section id="my_work" class="text-center my-5">
-                <div class="container-lg">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-12 col-sm-12">
-                            <h2 class="display-3 fw-bolder text-center">Take a look at some of my projects</h2>
-                        </div>
-                    </div>
+                    <Tagline />
+                    <ScrollIcon />
                 </div>
             </section>
-
-            <section>
-
-                <section class="p-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 p-4">
-                            <img src="./static/CobaltTableManager.png" alt="Cobalt Table Manager screenshot" class="img-fluid shadow">
-                        </div>
-                        <div class="col">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-10">
-                                    <h2 class="h1 pb-3">Cobalt Table Manager</h2>
-                                    <p class="lead">
-                                        A table reservation app desgined to make reserving a table as simple as possible.
-                                        Uses ReactJS on the front end and a Ruby on Rails API.
-                                    </p>
-                                    <ul class="list-unstyled my-3">
-                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Twilio API to send SMS to confirm bookings</span></li>
-                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Fuzzy search endpoint on the API</span></li>
-                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">User authentication using JWT</span></li>
-                                    </ul>
-
-                                <div class="d-flex justify-content-center">
-                                    <a href="https://github.com/Captainmango/Cobalt_Table_Manager" class="btn btn-primary mx-2" target="_blank">Go to Repo</a>
-                                    <a href="https://drive.google.com/file/d/1aAoJ8I6t927vky7LTYM2CxWk35rEK6d-/view?usp=sharing" class="btn btn-secondary mx-2" target="_blank">Video Demo</a>
-                                    <a href="https://cobalt-tbl-manager-client.herokuapp.com/" class="btn btn-dark mx-2" target="_blank">Live Demo</a>
-                                </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="p-2">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 p-4">
-                            <img src="./static/IWANTBOOKS.png" alt="IWantBooks screenshot" class="img-fluid shadow">
-                        </div>
-                        <div class="col">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-10">
-                                    <h2 class="h1 pb-3">IWANTBOOKS</h2>
-                                    <p class="lead">
-                                        A social media library app that allows users to add books to their libraries and comment on them
-                                        Built using Ruby on Rails and styled using Bootstrap 4.
-                                    </p>
-                                    <ul class="list-unstyled my-3">
-                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Google sign on via OAuth2.0</span></li>
-                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Embeded reader inside of app</span></li>
-                                        <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Google Books API search integration</span></li>
-                                    </ul>
-
-                                <div class="d-flex justify-content-center">
-                                    <a href="https://github.com/Captainmango/IWantBooks" class="btn btn-primary mx-2" target="_blank">Go to Repo</a>
-                                    <a href="https://drive.google.com/file/d/1XMmpe-viF6LPsqs-I4VqVFCBGBYHvOui/view?usp=sharing" class="btn btn-secondary mx-2"target="_blank">Video Demo</a>
-                                    <a href="https://iwantbooksapp.herokuapp.com/" class="btn btn-dark mx-2" target="_blank">Live Demo</a>
-                                </div>
-
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                <section class="p-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-6 p-4">
-                                <img src="./static/IntegralCRM.png" alt="IntegralCRM screenshot" class="img-fluid shadow">
-                            </div>
-                            <div class="col">
-                                <div class="row justify-content-center">
-                                    <div class="col-lg-10">
-                                       <h2 class="h1 pb-3">IntegralCRM</h2>
-                                       <p class="lead">
-                                           A complaints management system built using Ruby and Sinatra, a simple open source web library.
-                                            Styled with W3.CSS and erb.</p>
-                                       <ul class="list-unstyled my-3">
-                                           <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">Google sign on via OAuth2.0</span></li>
-                                           <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">PostgreSQL database</span></li>
-                                           <li class="d-flex align-items-center my-2"><span class="h6 fw-bolder">MVC using ActiveRecord</span></li>
-                                       </ul>
-
-                                    <div class="d-flex justify-content-center">
-                                        <a href="https://github.com/Captainmango/IntegralCRM" class="btn btn-primary mx-2">Go to Repo</a>
-                                        <!-- <a href="https://drive.google.com/file/d/1XMmpe-viF6LPsqs-I4VqVFCBGBYHvOui/view?usp=sharing" class="btn btn-secondary"target="_blank">Video Demo</a> -->
-                                    </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                </section>
-
-            </section>
-
-
-            <div class="position-relative bg-light shadow-lg">
-
 
             <section id="about_me" class="text-center py-5 m-3">
-
                 <div class="container-lg">
                     <div class="row justify-content-center">
                         <div class="col-lg-12 col-sm-12">
@@ -188,95 +38,14 @@ import '../styles/page.css'
             </section>
 
             <section class="panel content">
-
                 <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-lg-6 px-4">
-                            <p class="lh-base fs-3 text-center">
-                                Hi I’m Ed. I’m all about easy, friction-less journeys for users in all aspects of software. I always love a challenge and my
-                                modus operandi is to always find the simplest way to achieve what a user needs. I'm highly passionate about learning, but also
-                                mastery. Debugging is one of my favourite things to do.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row d-flex flex-row p-4 justify-content-around">
-                        <div class="card py-3 my-3 shadow" style="width: 20rem;">
-                            <div class="text-center">
-                                <h3 class="card-title">Back end skills</h3> <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code-branch" class="svg-inline--fa fa-code-branch fa-5x" role="img" viewBox="0 0 384 512"><path fill="currentColor" d="M384 144c0-44.2-35.8-80-80-80s-80 35.8-80 80c0 36.4 24.3 67.1 57.5 76.8-.6 16.1-4.2 28.5-11 36.9-15.4 19.2-49.3 22.4-85.2 25.7-28.2 2.6-57.4 5.4-81.3 16.9v-144c32.5-10.2 56-40.5 56-76.3 0-44.2-35.8-80-80-80S0 35.8 0 80c0 35.8 23.5 66.1 56 76.3v199.3C23.5 365.9 0 396.2 0 432c0 44.2 35.8 80 80 80s80-35.8 80-80c0-34-21.2-63.1-51.2-74.6 3.1-5.2 7.8-9.8 14.9-13.4 16.2-8.2 40.4-10.4 66.1-12.8 42.2-3.9 90-8.4 118.2-43.4 14-17.4 21.1-39.8 21.6-67.9 31.6-10.8 54.4-40.7 54.4-75.9zM80 64c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16zm0 384c-8.8 0-16-7.2-16-16s7.2-16 16-16 16 7.2 16 16-7.2 16-16 16zm224-320c8.8 0 16 7.2 16 16s-7.2 16-16 16-16-7.2-16-16 7.2-16 16-16z"/></svg>
-                            </div>
-                            <div class="card-body text-center"><div class="card-text text-center">I have a good understanding of the following languages</div>
-                            <ul class="list-unstyled my-3">
-                                <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Ruby</span></li>
-                                <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Node.js</span></li>
-                                <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Python</span></li>
-                                <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Java</span></li>
-                            </ul>
-                        </div>
-
-                        </div>
-                        <div class="card py-3 my-3 shadow" style="width: 20rem;">
-                            <div class="text-center">
-                                <h3 class="card-title">Front end skills</h3> <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="code" class="svg-inline--fa fa-code fa-5x" role="img" viewBox="0 0 640 512"><path fill="currentColor" d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg>
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="card-text">
-                                    I'm proficient in the following front end technologies
-                                </div>
-                                <ul class="list-unstyled my-3">
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">ReactJS</span></li>
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Sass</span></li>
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Javascript</span></li>
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">HTML and CSS</span></li>
-                                </ul>
-                            </div>
-
-
-                        </div>
-                        <div class="card py-3 my-3 shadow" style="width: 20rem;">
-                            <div class="text-center">
-                                <h3 class="card-title">Data skills</h3> <br>
-                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="database" class="svg-inline--fa fa-database fa-5x" role="img" viewBox="0 0 448 512"><path fill="currentColor" d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"/></svg>
-                            </div>
-                            <div class="card-body text-center">
-                                <div class="card-text">
-                                    I have a strong understanding of the following data technoligies
-                                </div>
-                                <ul class="list-unstyled my-3">
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">SQLite</span></li>
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">PostgreSQL</span></li>
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">JSON</span></li>
-                                    <li class="d-flex justify-content-center align-items-center my-2"><span class="h4">Cloud Firestore</span></li>
-                                </ul>
-                            </div>
-
-                        </div>
-                    </div>
+                    <AboutMe />
                 </div>
-
-
+                <SkillsContainer />
             </section>
+        </main>
 
-        </div>
-
-
-            <footer class="pb-4 bg-dark text-light">
-                <div class="container p-4">
-
-                    <p>Background by <a href="https://www.pexels.com/photo/photo-of-mountains-under-cloudy-sky-3022417/" target="_blank"> <b>Tomáš Malík</b> </a> from Pexels</p>
-                    <p>Icons by <a href="https://fontawesome.com/license/free" target="_blank">Font Awesome</a></p>
-
-                    <ul class="list-unstyled list-group list-group-horizontal">
-                        <li class="mx-2"><a href="https://github.com/Captainmango" target="_blank"><i class="fab fa-github"></i></a></li>
-                        <li class="mx-2"><a href="https://www.linkedin.com/in/edward-heaver-9ba556a0/" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                        <li class="mx-2"><a href="https://twitter.com/EdwardHeaver6"><i class="fab fa-twitter"></i></a></li>
-                    </ul>
-
-                    <p class="pt-2"><b>Ed Heaver 2020-2021</b></p>
-
-                </div>
-            </footer>
+        <Footer />
 
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
         <!-- <script src="index.js"></script> -->

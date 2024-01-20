@@ -11,7 +11,6 @@ $background-third: linear-gradient(to right, #00f260, #0575e6);
 $background-fourth: linear-gradient(to right, #2193b0, #6dd5ed);
 
 body {
-  background: $panel-background;
   &::-webkit-scrollbar {
     display: none;
   }
@@ -29,7 +28,7 @@ body {
 #landing {
   min-height: 100vh;
   min-width: 100vw;
-  background-image: url("./static/mountains.jpg");
+  background-image: url("./static/background-clouds.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
