@@ -9,17 +9,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
-      # Install node version 12
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/checkout@v4.1.1
+      - uses: actions/setup-node@v4.0.1
         with:
-          node-version: '12'
-
-      # Install Surge 
+          node-version: '20'
+      - name: Install dependencies
+        run: npm install
       - name: Install Surge
         run: npm install -g surge
-
-      # Deploy to the defined URL using the token
+      - name: Build site
+        run: npm run build
       - name: Deploy to surge
-        run: surge ./build https://edheaver.surge.sh --token ${{secrets.SURGE_TOKEN}}
+        run: surge ./dist https://edheaver.surge.sh --token ${{secrets.SURGE_TOKEN}}

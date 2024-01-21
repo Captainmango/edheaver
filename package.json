@@ -5,8 +5,12 @@
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "snowpack dev",
-    "build": "snowpack build"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "watch-sass": "sass --watch ./scss/page.scss ./src/styles/page.css",
+    "compile-sass": "sass ./scss/page.scss ./src/styles/page.css"
   },
   "repository": {
     "type": "git",
@@ -20,8 +24,10 @@
   },
   "homepage": "https://github.com/Captainmango/edheaver#readme",
   "devDependencies": {
-    "bootstrap": "^5.0.0-beta2",
-    "sass": "^1.32.8",
-    "snowpack": "^3.0.13"
+    "@vianetz/spectre.css": "^2.0.0",
+    "sass": "^1.69.5"
+  },
+  "dependencies": {
+    "astro": "^3.6.0"
   }
 }

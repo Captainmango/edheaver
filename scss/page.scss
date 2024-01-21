@@ -1,0 +1,91 @@
+@import '_variables';
+@import 'node_modules/@vianetz/spectre.css/src/spectre.scss';
+@import 'node_modules/@vianetz/spectre.css/src/_timelines.scss';
+@import '_viewport';
+@import '_navbutton';
+
+$gap: 2rem;
+
+body {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  color: $dark-color;
+}
+
+main {
+  min-height: 100vh;
+  min-width: 100vw;
+  background-image: url("./static/background-clouds.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+p {
+  font-size: clamp(12px, 4vw, 20px);
+}
+
+.text-hero {
+  font-size: 4rem;
+}
+
+.o-33 {
+  background-color: rgba(255, 255, 255, 0.33);
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.d-inline-flex {
+  flex-direction: row;
+  gap: $gap;
+}
+
+@media only screen and (max-width: 950px) {
+  .d-inline-flex {
+    gap: calc($gap / 4);
+    flex-direction: column;
+  }
+}
+
+@keyframes instruct {
+  0% {
+    transfrom: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+}
+
+.scrollIcon {
+  display: block;
+  padding-top: 100px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(60px);
+  }
+}
+
+svg #wheel {
+  animation: scroll ease 2s infinite;
+  fill: #000;
+}
