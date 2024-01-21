@@ -1,0 +1,25 @@
+---
+
+---
+
+<div class="center">
+    <div class="plus" id="plus">
+      <div class="plus__line plus__line--v">
+        <a href="about" class="plus__link">About me</a>
+        <a href="#" class="plus__link"></a>
+        <a href="#" class="plus__link"></a>
+        <a href="#" class="plus__link"></a>
+      </div>
+      <div class="plus__line plus__line--h"></div>
+    </div>
+</div>
+
+<script>
+const plus = document.getElementById('plus');
+
+function plusToggle() {
+   plus?.classList.toggle('plus--active');
+}
+
+plus?.addEventListener('click', plusToggle);
+</script>
